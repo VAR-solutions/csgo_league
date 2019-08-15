@@ -6,6 +6,7 @@
       <v-spacer></v-spacer>
       <template v-slot:extension>
         <v-tabs
+        
           color="#91ff00"
           v-model="tab"
           active-class
@@ -14,7 +15,9 @@
         >
           <v-tabs-slider color="#91ff00"></v-tabs-slider>
 
-          <v-tab v-for="(item,i ) in items" :key="i" :to="{ name : link[i]}">{{ item }}</v-tab>
+          <v-tab 
+          exact
+          v-for="(item,i ) in items" :key="i" :to="{ name : link[i]}">{{ item }}</v-tab>
         </v-tabs>
       </template>
     </v-toolbar>
