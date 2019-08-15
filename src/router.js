@@ -7,7 +7,6 @@ import Announcements from "./views/Announcements.vue";
 import Fixtures from "./views/Fixtures.vue";
 import PointsTable from "./views/PointTable.vue";
 import Profile from "./views/Profile.vue";
-import Register from "./views/Register";
 
 Vue.use(Router);
 
@@ -59,11 +58,6 @@ export default new Router({
       name: "profile",
       component: Profile,
       props: true
-    },
-    {
-      path: "/register",
-      name: "register",
-      component: Register
     }
   ]
 });
