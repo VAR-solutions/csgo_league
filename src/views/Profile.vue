@@ -1,25 +1,37 @@
 <template>
-  <v-container>
-    <v-card pa-2>
-      <v-layout row > 
-        <v-flex xs12 md6 justify-center align-self-center>
-          <img width="50%"
+  <v-container  mt-5>
+    <v-card pa-2 
+      width="80%"
+      class="mx-auto"
+     
+     
+    >
+      <v-row  > 
+        <v-col cols="12" md="4" xs="12" justify="center" align="center">
+          <img width="80%"
             src="https://microhealth.com/assets/images/illustrations/personal-user-illustration-@2x.png"
           />
-        </v-flex>
-        <v-flex xs12 sm6 justify-center align-self-center>
+        </v-col>
+        <v-col cols="12" md="8" xs="12" justify-center align-self-center>
             <v-card-title><h1>{{ data.name}}</h1></v-card-title>
             <v-card-text>
-               <h2>{{ data.tag}}</h2>
-               <h2>{{ data.primary_weapon}}</h2> 
-                <h2>{{ data.secondary_weapon}}</h2>
+               <p class="fin" style="font-size: 25px">{{ data.tag}}</p>
+               <p class="size lexend">Primary Weapon: {{ data.primary_weapon}}</p> 
+               <p class="size lexend">Secondary Weapon: {{ data.secondary_weapon}}</p>
+               <p class="size lexend">Category: To be decided</p>
+               <p class="size lexend">Team: To be Auctioned</p>
                 <h2>{{ data.category}}</h2>
             </v-card-text>
-        </v-flex>
-      </v-layout>
+        </v-col>
+      </v-row>
     </v-card>
   </v-container>
 </template>
+<style>
+.size{
+  font-size: 20px;
+}
+</style>
 <script>
 import firebase from "firebase/app";
 import "firebase/firestore";
