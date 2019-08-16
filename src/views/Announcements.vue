@@ -1,8 +1,6 @@
 <template>
     <v-container>
-        <v-layout wrap>
             <Announcement v-for="(ex,k) in this.announcements" :key="k" :data="ex" />
-        </v-layout>
     </v-container>
 </template>
 
@@ -19,12 +17,11 @@ export default {
   },
   created() {
     db.firestore()
-      .collection("announcements")
-      .get()
-      .then(res => {
+      .collection("announcements").orderBy('time', 'desc')
+      .onSnapshot(res => {
+        this.announcements = []
         res.forEach(doc => {
           this.announcements.push(doc.data());
-          console.log(doc.data())
         });
       });
   },
