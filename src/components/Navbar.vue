@@ -22,6 +22,18 @@
       </template>
     </v-toolbar>
     <router-view></router-view>
+    <v-footer
+      padless
+      class="lexend"
+
+    >
+      <v-col
+        class="text-center"
+        cols="12"
+      >
+        Made with <span class="fin">💚</span> by <span class="fin"><a href="https://github.com/VAR-solutions" class="link">UpThrust</a></span> For <span class="fin">Arcadia</span>
+      </v-col>
+    </v-footer>
   </v-container>
 </template>
 
