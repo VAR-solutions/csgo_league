@@ -4,7 +4,7 @@
       <v-layout align-center justify-center pt-4>
         <v-avatar size="75%">
           <img
-            src="https://microhealth.com/assets/images/illustrations/personal-user-illustration-@2x.png"
+            src="https://firebasestorage.googleapis.com/v0/b/csgo-auction.appspot.com/o/side-03.png?alt=media&token=91ce7293-e061-4a46-8929-d72bb6917499"
           />
         </v-avatar>
       </v-layout>

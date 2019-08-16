@@ -22,10 +22,13 @@
       </template>
     </v-toolbar>
     <router-view></router-view>
+    <v-container my-4>
+    </v-container>
     <v-footer
       padless
-      class="lexend"
-
+      absolute
+      class="lexend "
+      
     >
       <v-col
         class="text-center"
