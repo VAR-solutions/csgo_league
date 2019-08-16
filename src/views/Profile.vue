@@ -15,7 +15,7 @@
         <v-col cols="12" md="8" xs="12" justify-center align-self-center>
             <v-card-title><h1>{{ data.name}}</h1></v-card-title>
             <v-card-text>
-               <p class="fin" style="font-size: 25px">{{ data.tag}}</p>
+               <p class="fin lexend" style="font-size: 25px">{{ data.tag}}</p>
                <p class="size lexend">Primary Weapon: {{ data.primary_weapon}}</p> 
                <p class="size lexend">Secondary Weapon: {{ data.secondary_weapon}}</p>
                <p class="size lexend">Category: To be decided</p>
