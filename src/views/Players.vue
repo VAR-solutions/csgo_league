@@ -1,7 +1,9 @@
 <template>
   <v-container grid-list-sm align-content-space-between>
     <v-layout wrap>
-      <Player v-for="(ex,k) in this.players" :key="k" :data="ex" />
+      <v-flex v-for="(ex,k) in this.players" :key="k" xs12 sm6 md3>
+        <Player :data="ex" />
+      </v-flex>
     </v-layout>
   </v-container>
 </template>
@@ -19,7 +21,8 @@ export default {
   },
   created() {
     db.firestore()
-      .collection("players").orderBy("name")
+      .collection("players")
+      .orderBy("name")
       .get()
       .then(res => {
         res.forEach(doc => {
