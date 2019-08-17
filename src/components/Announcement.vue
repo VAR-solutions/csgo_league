@@ -4,7 +4,7 @@
       <v-col>
         <v-card dark max-width="800" class="mx-auto">
           <v-card-text class="white--text" pa-0>
-            <div class="overline mb-0">{{timestamp}}</div>
+            <div class="overline mb-0 fin">{{timestamp}}</div>
             <v-list >
               <v-list-item>
                 <div class="fontover">{{ this.data.announcement }}</div>
