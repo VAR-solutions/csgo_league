@@ -24,7 +24,12 @@ export default {
   props: ["data"],
   computed: {
       timestamp: function() {
+          if(this.data.time < (Date.now() - 1200000)){
           return moment(this.data.time).calendar()
+        }
+        else{
+          return moment(this.data.time).fromNow()
+        }
       }
   }
 };

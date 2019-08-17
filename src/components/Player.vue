@@ -1,18 +1,18 @@
 <template>
-  <v-flex xs12 sm6 md3>
-    <v-card class="mx-auto my-2" width="95%" tile :to="'/players/'+data.uid">
+    <v-card class="mx-auto mb-2" width="95%" tile :to="'/players/'+data.uid">
       <v-layout align-center justify-center pt-4>
         <v-avatar size="75%">
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/csgo-auction.appspot.com/o/side-03.png?alt=media&token=91ce7293-e061-4a46-8929-d72bb6917499"
+          <img v-if="!data.photo"
+            src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/deadpool-1563973577.jpg?crop=0.563xw:1.00xh;0,0&resize=480:*"
           />
+          <img v-else-if="data.photo"
+            :src="data.photo" />
         </v-avatar>
       </v-layout>
       <v-layout align-center justify-center>
-        <v-card-title>{{ this.data.name }}</v-card-title>
+        <v-card-title>{{ this.data.name.split(" ")[0] }}</v-card-title>
       </v-layout>
     </v-card>
-  </v-flex>
 </template>
 
 <script>
