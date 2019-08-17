@@ -3,21 +3,24 @@
     <v-card pa-2 width="90%" class="mx-auto">
       <v-row>
         <v-col cols="12" md="5" xs="12" justify="center" align="center">
+          <v-avatar height="98%" width="78%">
           <img
             v-if="!data.photo"
-            width="50%"
+            
             src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/deadpool-1563973577.jpg?crop=0.563xw:1.00xh;0,0&resize=480:*"
           />
+          
           <img v-else-if="data.photo" :src="data.photo" />
+          </v-avatar>
         </v-col>
         <v-col cols="12" md="7" xs="12" justify="center" align="center" class="mt-5">
           <h1 class="fin">{{ data.tag}}</h1>
-          <v-card-text>
-            <p class="lexend" style="font-size: 25px">{{ data.name}}</p>
-            <p class="size lexend">Primary Weapon: {{ data.primary_weapon}}</p>
-            <p class="size lexend">Secondary Weapon: {{ data.secondary_weapon}}</p>
-            <p class="size lexend">Category: To be decided</p>
-            <p class="size lexend">Team: To be Auctioned</p>
+          <v-card-text class="lexend">
+            <p style="font-size: 25px"><b>{{ data.name}}</b></p>
+            <p class="size">Primary Weapon: {{ data.primary_weapon}}</p>
+            <p class="size">Secondary Weapon: {{ data.secondary_weapon}}</p>
+            <p class="size">Category: To be decided</p>
+            <p class="size">Team: To be Auctioned</p>
             <h2>{{ data.category}}</h2>
           </v-card-text>
         </v-col>

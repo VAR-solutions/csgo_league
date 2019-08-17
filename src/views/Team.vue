@@ -10,11 +10,8 @@
           <v-img v-else-if="data.photo"
             :src="data.photo"
           ></v-img>
-          <v-card-title class="justify-center">{{ data.name }}</v-card-title>
-          <v-card-text>
-            Owner: {{ data.owner }}
-            <br />Mobile: {{ data.mob}}
-          </v-card-text>
+          <v-card-title class="justify-center fin lexend">{{ data.name }}</v-card-title>
+          <p class="fontover" justify ="center" align="center" style="font-size: 1.2em">Owner: {{this.data.owner}}<br>Contact: {{data.mob}}</p>
         </v-card>
       </v-col>
       <v-col cols="12" md="8" xs="12">

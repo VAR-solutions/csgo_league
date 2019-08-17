@@ -14,7 +14,7 @@
         <v-card-title class="fin lexend">{{ this.data.name }}</v-card-title>
         
       </v-layout>
-      <p class="fontover" justify ="center" align="center" style="font-size: 1.2em">Team Owner: {{this.data.owner}}</p>
+      <p class="fontover" justify ="center" align="center" style="font-size: 1.2em">Owner: {{this.data.owner}}</p>
     </v-card>
   </v-flex>
 </template>
