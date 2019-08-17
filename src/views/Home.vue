@@ -52,7 +52,7 @@
           The league runs for about 2months with 5 teams competing against each other to be on the top. The teams are owned by the students themselves and also a formal auction is conducted to choose the players.
           
           We witness people getting happy, sad, emotional over the matches because they say</p>
-          <p style="color: #91ff00; font-size: 16px" class="press"> "Gaming has no Religion, It itself is a religion".</p>
+          <p style="color: #91ff00; font-size: 16px" class="press"> "Gaming has no Religion, It itself is a religion"</p>
 
 
           
