@@ -1,4 +1,6 @@
-# csgo_auction
+# CS:GO League
+
+## A website for CS:GO league organised by Arcadia: The Gaming Club of IIITV
 
 ## Project setup
 ```

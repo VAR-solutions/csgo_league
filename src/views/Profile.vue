@@ -50,7 +50,6 @@ export default {
       .doc(this.$route.params.id)
       .get()
       .then(res => {
-        console.log(res.data());
         this.data = res.data();
       });
   }

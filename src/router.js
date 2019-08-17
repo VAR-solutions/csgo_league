@@ -10,18 +10,28 @@ import Profile from "./views/Profile.vue";
 
 Vue.use(Router);
 
-export default new Router({
+const router =  new Router({
   mode: "history",
   base: process.env.BASE_URL,
   routes: [
     {
+      path: '*',
+      redirect: '/'
+    },
+    {
       path: "/",
       name: "home",
-      component: Home
+      component: Home,
+      meta: {
+        title: 'Home | CS:GO League - Arcadia'
+      }
     },
     {
       path: "/about",
       name: "about",
+      meta: {
+        title: 'About | CS:GO League - Arcadia'
+      },
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
@@ -31,33 +41,74 @@ export default new Router({
     {
       path: "/teams",
       name: "teams",
-      component: Teams
+      component: Teams,
+      meta: {
+        title: 'Teams | CS:GO League - Arcadia'
+      }
     },
     {
       path: "/announcements",
       name: "announcements",
-      component: Announcements
+      component: Announcements,
+      meta: {
+        title: 'Announcements | CS:GO League - Arcadia'
+      }
     },
     {
       path: "/fixtures",
       name: "fixtures",
-      component: Fixtures
+      component: Fixtures,
+      meta: {
+        title: 'Fixtures | CS:GO League - Arcadia'
+      }
     },
     {
       path: "/ptable",
       name: "pointsTable",
-      component: PointsTable
+      component: PointsTable,
+      meta: {
+        title: 'Points Table | CS:GO League - Arcadia'
+      }
     },
     {
       path: "/players",
       name: "players",
-      component: Players
+      component: Players,
+      meta: {
+        title: 'Players | CS:GO League - Arcadia'
+      }
     },
     {
       path: "/players/:id",
       name: "profile",
       component: Profile,
-      props: true
+      props: true,
+      meta: {
+        title: 'Player\'s Profile | CS:GO League - Arcadia'
+      }
     }
   ]
 });
+
+router.beforeEach((to, from, next) => {
+  // This goes through the matched routes from last to first, finding the closest route with a title.
+  // eg. if we have /some/deep/nested/route and /some, /deep, and /nested have titles, nested's will be chosen.
+  const nearestWithTitle = to.matched.slice().reverse().find(r => r.meta && r.meta.title);
+
+  // Find the nearest route element with meta tags.
+  const nearestWithMeta = to.matched.slice().reverse().find(r => r.meta && r.meta.metaTags);
+  const previousNearestWithMeta = from.matched.slice().reverse().find(r => r.meta && r.meta.metaTags);
+
+  // If a route with a title was found, set the document (page) title to that value.
+  if(nearestWithTitle) document.title = nearestWithTitle.meta.title;
+
+  // Remove any stale meta tags from the document using the key attribute we set below.
+  Array.from(document.querySelectorAll('[data-vue-router-controlled]')).map(el => el.parentNode.removeChild(el));
+
+  // Skip rendering meta tags if there are none.
+  if(!nearestWithMeta) return next();
+
+  next();
+});
+
+export default router;

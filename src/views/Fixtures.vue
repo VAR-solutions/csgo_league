@@ -38,7 +38,6 @@ export default {
       .then(res => {
         res.forEach(doc => {
           this.fixtures.push(doc.data());
-          console.log(doc.data())
         });
       });
   },
