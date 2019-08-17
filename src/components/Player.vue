@@ -10,7 +10,7 @@
         </v-avatar>
       </v-layout>
       <v-layout align-center justify-center>
-        <v-card-title>{{ this.data.name.split(" ")[0] }}</v-card-title>
+        <v-card-title class="fontover">{{ this.data.name.split(" ")[0] }}</v-card-title>
       </v-layout>
     </v-card>
 </template>
