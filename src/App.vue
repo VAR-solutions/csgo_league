@@ -46,7 +46,8 @@ export default {
         "Teams",
         "Announcements",
         "Points Table",
-        "Fixtures"
+        "Fixtures",
+        "Rules"
       ],
       link: [
         "home",
@@ -54,7 +55,8 @@ export default {
         "teams",
         "announcements",
         "pointsTable",
-        "fixtures"
+        "fixtures",
+        "Rules"
       ],
       user: null
     };
