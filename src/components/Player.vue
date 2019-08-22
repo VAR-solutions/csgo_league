@@ -1,7 +1,7 @@
 <template>
     <v-card class="mx-auto mb-2" width="95%" tile :to="'/players/'+data.uid">
       <v-layout align-center justify-center pt-4>
-        <v-avatar size="75%">
+        <v-avatar size="240">
           <img v-if="!data.photo"
             src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/deadpool-1563973577.jpg?crop=0.563xw:1.00xh;0,0&resize=480:*"
           />

@@ -1,13 +1,17 @@
 <template>
-    <v-container>
-        <h2>PointsTable</h2>
-        <h2>Yet to be announced</h2>
-    </v-container>
+  <v-container>
+    <Loader/>
+    <h1 class="fin" align="center">COMING SOON...</h1>
+  </v-container>
 </template>
 
 <script>
+import Loader from "../components/Loader";
+
 export default {
-    name: "pointsTable",
-    
-}
+  name: "pointsTable",
+  components: {
+    Loader
+  }
+};
 </script>
