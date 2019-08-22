@@ -3,13 +3,15 @@
     <v-row>
       <v-col cols="12" md="4" xs="12" justify="center" align="center">
         <v-card >
-          <v-img v-if="!data.photo"
-            width="50%"
-            src="https://firebasestorage.googleapis.com/v0/b/csgo-auction.appspot.com/o/side-03.png?alt=media&token=91ce7293-e061-4a46-8929-d72bb6917499"
-          ></v-img>
-          <v-img v-else-if="data.photo"
-            :src="data.photo"
-          ></v-img>
+         <v-layout align-center justify-center pt-4>
+        <v-avatar size="240">
+          <img v-if="!data.photo"
+            src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/deadpool-1563973577.jpg?crop=0.563xw:1.00xh;0,0&resize=480:*"
+          />
+          <img v-else-if="data.photo"
+            :src="data.photo" />
+        </v-avatar>
+      </v-layout>
           <v-card-title class="justify-center fin lexend">{{ data.name }}</v-card-title>
           <p class="fontover" justify ="center" align="center" style="font-size: 1.2em">Owner: {{this.data.owner}}<br>Contact: {{data.mob}}</p>
         </v-card>

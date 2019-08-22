@@ -9,9 +9,16 @@
             :src="data.photo" />
         </v-avatar>
       </v-layout>
-      <v-layout align-center justify-center>
-        <v-card-title class="fontover">{{ this.data.name.split(" ")[0] }}</v-card-title>
-      </v-layout>
+
+      <p class="fin mt-3" justify="center" align="center">{{ this.data.tag }}</p>
+      
+        <p class="fontover" style="font-size: 1.8em; margin-top: -8%" justify="center" align="center">{{ this.data.name.split(" ")[0] }}</p>
+        
+        
+
+
+      
+      
     </v-card>
 </template>
 

@@ -19,9 +19,9 @@
             <p style="font-size: 25px"><b>{{ data.name}}</b></p>
             <p class="size">Primary Weapon: {{ data.primary_weapon}}</p>
             <p class="size">Secondary Weapon: {{ data.secondary_weapon}}</p>
-            <p class="size">Category: To be decided</p>
-            <p class="size">Team: To be Auctioned</p>
-            <h2>{{ data.category}}</h2>
+            <p class="size">Category: {{ data.category }}</p>
+            <p class="size">Team: {{data.team}}</p>
+            
           </v-card-text>
         </v-col>
       </v-row>
