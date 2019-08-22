@@ -9,7 +9,7 @@ import Fixtures from "./views/Fixtures.vue";
 import PointsTable from "./views/PointTable.vue";
 import Profile from "./views/Profile.vue";
 import Team from "./views/Team.vue";
-
+import Rules from "./views/Rules.vue";
 Vue.use(Router);
 
 const router = new Router({
@@ -96,6 +96,14 @@ const router = new Router({
       props: true,
       meta: {
         title: "Team's Profile | CS:GO League - Arcadia"
+      }
+    },
+    {
+      path: "/rules",
+      name: "Rules",
+      component: Rules,
+      meta: {
+        title: "Rules | CS:GO League - Arcadia"
       }
     }
   ]

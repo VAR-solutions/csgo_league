@@ -4,13 +4,8 @@
     <v-card pa-2 width="90%" class="mx-auto">
       <v-row>
         <v-col cols="12" md="5" xs="12" justify="center" align="center">
-          <v-avatar height="98%" width="78%">
-            <img
-              v-if="!data.photo"
-              src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/deadpool-1563973577.jpg?crop=0.563xw:1.00xh;0,0&resize=480:*"
-            />
-
-            <img v-else-if="data.photo" :src="data.photo" />
+          <v-avatar size="270">
+            <img :src="data.photo" @error="imgUrlAlt" />
           </v-avatar>
         </v-col>
         <v-col cols="12" md="7" xs="12" justify="center" align="center" class="mt-5">
@@ -19,10 +14,22 @@
             <p style="font-size: 25px">
               <b>{{ data.name}}</b>
             </p>
-            <p class="size">Primary Weapon: <span class="fin"> {{ data.primary_weapon.toUpperCase()}} </span></p>
-            <p class="size">Secondary Weapon: <span class="fin"> {{ data.secondary_weapon.toUpperCase()}}</span></p>
-            <p class="size">Category: <span class="fin"> {{ data.category.toUpperCase() }}</span></p>
-            <p class="size">Team: <span class="fin"> {{data.team}}</span></p>
+            <p class="size">
+              Primary Weapon:
+              <span class="fin">{{ data.primary_weapon.toUpperCase()}}</span>
+            </p>
+            <p class="size">
+              Secondary Weapon:
+              <span class="fin">{{ data.secondary_weapon.toUpperCase()}}</span>
+            </p>
+            <p class="size">
+              Category:
+              <span class="fin">{{ data.category.toUpperCase() }}</span>
+            </p>
+            <p class="size">
+              Team:
+              <span class="fin">{{data.team}}</span>
+            </p>
           </v-card-text>
         </v-col>
       </v-row>
@@ -58,6 +65,12 @@ export default {
       .then(res => {
         this.data = res.data();
       });
+  },
+  methods: {
+    imgUrlAlt(event) {
+      event.target.src =
+        "https://firebasestorage.googleapis.com/v0/b/csgo-auction.appspot.com/o/side-03.png?alt=media&token=91ce7293-e061-4a46-8929-d72bb6917499";
+    }
   }
 };
 </script>
