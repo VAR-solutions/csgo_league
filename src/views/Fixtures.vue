@@ -1,9 +1,9 @@
 <template>
-  <v-container>
+  <!-- <v-container>
     <Loader />
     <h1 class="fin" align="center">COMING SOON...</h1>
-  </v-container>
-  <!-- <v-container>
+  </v-container> -->
+  <v-container>
     <Loader />
     <v-timeline align-top :dense="$vuetify.breakpoint.smAndDown">
       <v-timeline-item v-for="(item, i) in fixtures" :key="i" color="#91ff00" fill-dot>
@@ -16,7 +16,7 @@
         </v-card>
       </v-timeline-item>
     </v-timeline>
-  </v-container>-->
+  </v-container>
 </template>
 
 <script>
@@ -31,15 +31,18 @@ export default {
     Loader
   },
   created() {
-    // db.firestore()
-    //   .collection("fixtures")
-    //   .orderBy("mnumber")
-    //   .get()
-    //   .then(res => {
-    //     res.forEach(doc => {
-    //       this.fixtures.push(doc.data());
-    //     });
-    //   });
+    console.log("5")
+    db.firestore()
+      .collection("fixtures")
+      .orderBy("mnumber")
+      .get()
+      .then(res => {
+        console.log(res)
+        res.forEach(doc => {
+          this.fixtures.push(doc.data());
+          console.log(doc.data())
+        });
+      });
   },
   data() {
     return {

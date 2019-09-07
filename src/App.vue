@@ -7,11 +7,11 @@
         <v-tabs
           color="#91ff00"
           v-model="tab"
-          active-class
           align-with-title
+          active-class
           background-color="transparent"
         >
-          <v-tabs-slider color="#91ff00"></v-tabs-slider>
+          <v-tabs-slider  color="#91ff00"></v-tabs-slider>
           <v-tab exact v-for="(item,i ) in items" :key="i" :to="{ name : link[i]}">{{ item }}</v-tab>
         </v-tabs>
       </template>
@@ -67,5 +67,8 @@ export default {
 <style>
 .t {
   color: #91ff00;
+}
+.v-application--is-ltr .v-tabs--align-with-title > .v-tabs-bar--is-mobile:not(.v-tabs-bar--show-arrows) > .v-slide-group__wrapper > .v-tabs-bar__content > .v-tab:first-child, .v-application--is-ltr .v-tabs--align-with-title > .v-tabs-bar--is-mobile:not(.v-tabs-bar--show-arrows) > .v-slide-group__wrapper > .v-tabs-bar__content > .v-tabs-slider-wrapper + .v-tab {
+    margin-left: 16px !important;
 }
 </style>
