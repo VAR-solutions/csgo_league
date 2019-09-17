@@ -20,7 +20,6 @@
 </template>
 
 <script>
-import firebase from "firebase/app";
 import "firebase/firestore";
 import db from "../firebase";
 import Loader from "../components/Loader";
@@ -31,16 +30,13 @@ export default {
     Loader
   },
   created() {
-    console.log("5")
     db.firestore()
       .collection("fixtures")
       .orderBy("mnumber")
       .get()
       .then(res => {
-        console.log(res)
         res.forEach(doc => {
           this.fixtures.push(doc.data());
-          console.log(doc.data())
         });
       });
   },

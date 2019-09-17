@@ -6,7 +6,7 @@ import Players from "./views/Players.vue";
 import Teams from "./views/Teams.vue";
 import Announcements from "./views/Announcements.vue";
 import Fixtures from "./views/Fixtures.vue";
-import PointsTable from "./views/PointTable.vue";
+import PointsTable from "./views/PointsTable.vue";
 import Profile from "./views/Profile.vue";
 import Team from "./views/Team.vue";
 import Rules from "./views/Rules.vue";
