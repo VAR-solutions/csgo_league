@@ -13,6 +13,7 @@
     <br />
     <a href="https://csgo-auction.web.app/"><strong>See the DEMO »</strong></a>
     <br />
+  <a href="https://github.com/VAR-solutions/csgo-league-admin"><strong>See the ADMIN site here »</strong></a>
     <br />
   </p>
 </p>
