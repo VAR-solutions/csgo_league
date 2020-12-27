@@ -2,9 +2,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
     <img src="https://firebasestorage.googleapis.com/v0/b/csgo-auction.appspot.com/o/arcadia.jpeg?alt=media&token=9d7674f5-a74c-41f5-aefb-7815f7143588" alt="Logo" width="80" height="80">
-  </a>
+
 
   <h3 align="center">CS : GO League Web App</h3>
 
